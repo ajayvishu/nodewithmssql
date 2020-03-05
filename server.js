@@ -31,10 +31,10 @@ var  executeQuery = function(res, query){
             res.send(error_db);
         }
         else 
-		{
-             // Create Request object
+            {
+            // Create Request object
             var request = new sql.Request();
-             // Query to the database
+            // Query to the database
             request.query(query, function (error_query, res_data) {
                 if (error_query) {
                     console.log("Error while querying Database :- " + error_query);
@@ -61,19 +61,19 @@ app.get("/api/emp/:id", function(req , res){
 });
 
 //POST API
- app.post("/api/emp", function(req , res){
+app.post("/api/emp", function(req , res){
     var query = "INSERT INTO Employee VALUES ('" + req.body.Employeename + "','" + req.body.EmployeeJoiningDate + "','" + req.body.Status + "')";
     executeQuery (res, query);
 });
 
 //PUT API
- app.put("/api/emp/:id", function(req , res){
+app.put("/api/emp/:id", function(req , res){
     var query = "UPDATE Employee SET Employeename= '" + req.body.Employeename  +  "' , EmployeeJoiningDate=  '" + req.body.EmployeeJoiningDate + "',Status=  '" + req.body.Status + "'  WHERE EmployeeID= " + req.params.id;
     executeQuery (res, query);
 });
 
 // DELETE API
- app.delete("/api/emp/:id", function(req , res){
+app.delete("/api/emp/:id", function(req , res){
     var query = "DELETE FROM Employee WHERE EmployeeID=" + req.params.id;
     executeQuery (res, query);
 });
