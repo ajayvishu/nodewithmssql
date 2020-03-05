@@ -41,7 +41,7 @@ var  executeQuery = function(res, query){
                     res.send(error_query);
                 }
                 else {
-                    res.send(res_data);
+                    res.send(res_data.recordset);
                 }
             });
         }
