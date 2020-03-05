@@ -50,14 +50,12 @@ var  executeQuery = function(res, query){
 
 //GET API
 app.get("/api/emp", function(req , res){
-	debugger
     var query = "SELECT * FROM Employee";
     executeQuery (res, query);
 });
 
 //GET API WITH ID
 app.get("/api/emp/:id", function(req , res){
-	debugger
     var query = "SELECT * FROM Employee WHERE EmployeeID= " + req.params.id;
     executeQuery (res, query);
 });
