@@ -91,7 +91,7 @@ CREATE TABLE [dbo].[Employee](
 	[Status] [int] NULL
 ) ON [PRIMARY]
 GO
-INSERT [dbo].[Employee] ([EmployeeID], [Employeename], [EmployeeJoiningDate], [Status]) VALUES (1, N'ajay', CAST(N'2020-01-02T09:53:05.390' AS DateTime), 1)
-INSERT [dbo].[Employee] ([EmployeeID], [Employeename], [EmployeeJoiningDate], [Status]) VALUES (2, N'hiren', CAST(N'2020-01-02T09:53:21.930' AS DateTime), 0)
-INSERT [dbo].[Employee] ([EmployeeID], [Employeename], [EmployeeJoiningDate], [Status]) VALUES (3, N'ganesh', CAST(N'2020-01-02T09:53:34.910' AS DateTime), 1)
+INSERT [dbo].[Employee] VALUES (N'ajay', CAST(N'2020-01-02T09:53:05.390' AS DateTime), 1)
+INSERT [dbo].[Employee] VALUES (N'hiren', CAST(N'2020-01-02T09:53:21.930' AS DateTime), 0)
+INSERT [dbo].[Employee] VALUES (N'ganesh', CAST(N'2020-01-02T09:53:34.910' AS DateTime), 1)
 */
